@@ -18,6 +18,56 @@
 
 ## English
 
+## 📊 MLOps Architecture
+
+```mermaid
+graph TB
+    A[Data Source] --> B[Data Versioning - DVC]
+    B --> C[Feature Engineering]
+    C --> D[Model Training]
+    D --> E[Experiment Tracking - MLflow]
+    E --> F[Model Registry]
+    F --> G{Model Validation}
+    G -->|Pass| H[Containerization - Docker]
+    G -->|Fail| D
+    H --> I[Deployment - Kubernetes]
+    I --> J[Serving API]
+    J --> K[Monitoring - Prometheus]
+    K --> L{Performance OK?}
+    L -->|No| M[Retrain Trigger]
+    M --> D
+    L -->|Yes| J
+    
+    style A fill:#e1f5ff
+    style J fill:#c8e6c9
+    style G fill:#fff9c4
+    style L fill:#ffcdd2
+```
+
+## 🔄 CI/CD Pipeline
+
+```mermaid
+sequenceDiagram
+    participant Dev
+    participant Git
+    participant CI
+    participant Registry
+    participant K8s
+    participant Monitor
+    
+    Dev->>Git: Push code
+    Git->>CI: Trigger pipeline
+    CI->>CI: Run tests
+    CI->>CI: Build Docker image
+    CI->>Registry: Push image
+    CI->>K8s: Deploy to staging
+    K8s->>K8s: Health check
+    K8s->>Monitor: Send metrics
+    Monitor-->>Dev: Deployment status
+```
+
+
+
 ### 📋 Overview
 
 Production-ready MLOps pipeline implementing best practices for machine learning operations. Includes data versioning (DVC), experiment tracking (MLflow), model registry, containerization (Docker), orchestration (Kubernetes), CI/CD (GitHub Actions), monitoring (Prometheus/Grafana), and automated retraining.
