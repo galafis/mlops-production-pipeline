@@ -66,8 +66,6 @@ sequenceDiagram
     Monitor-->>Dev: Deployment status
 ```
 
-
-
 ### 📋 Overview
 
 Production-ready MLOps pipeline implementing best practices for machine learning operations. Includes data versioning (DVC), experiment tracking (MLflow), model registry, containerization (Docker), orchestration (Kubernetes), CI/CD (GitHub Actions), monitoring (Prometheus/Grafana), and automated retraining.
@@ -123,7 +121,6 @@ The pipeline includes comprehensive monitoring:
 - **Model Metrics**: Accuracy, precision, recall, drift detection
 - **Infrastructure**: CPU, memory, disk, network utilization
 - **Business Metrics**: Predictions served, revenue impact
-
 
 ## 🚀 Quick Start
 
@@ -186,7 +183,6 @@ Pipeline MLOps pronto para produção implementando melhores práticas para oper
 
 **Gabriel Demetrios Lafis**
 - GitHub: [@galafis](https://github.com/galafis)
-
 
 ## 💻 Detailed Code Examples
 
@@ -633,14 +629,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - Special thanks to all contributors
 
 ## 📊 Project Statistics
-
-![GitHub stars](https://img.shields.io/github/stars/galafis/mlops-production-pipeline?style=social)
-![GitHub forks](https://img.shields.io/github/forks/galafis/mlops-production-pipeline?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/galafis/mlops-production-pipeline?style=social)
-![GitHub issues](https://img.shields.io/github/issues/galafis/mlops-production-pipeline)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/galafis/mlops-production-pipeline)
-![GitHub last commit](https://img.shields.io/github/last-commit/galafis/mlops-production-pipeline)
-![GitHub code size](https://img.shields.io/github/languages/code-size/galafis/mlops-production-pipeline)
 
 ## 🚀 Roadmap
 
